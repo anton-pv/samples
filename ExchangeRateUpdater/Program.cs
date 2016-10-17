@@ -15,7 +15,7 @@ namespace ExchangeRateUpdater
             new Currency("KES"),
             new Currency("RUB"),
             new Currency("THB"),
-            new Currency("TRY"),
+            new Currency("NOK"),
             new Currency("XYZ")
         };
 
@@ -23,7 +23,7 @@ namespace ExchangeRateUpdater
         {
             try
             {
-                var provider = new ExchangeRateProvider();
+                var provider = new ExchangeRateProvider(SourceMode.File);
                 var rates = provider.GetExchangeRates(currencies);
 
                 Console.WriteLine("Successfully retrieved " + rates.Count() + " exchange rates:");

@@ -17,7 +17,7 @@
 
         public override string ToString()
         {
-            return SourceCurrency.Code + "/" + TargetCurrency.Code + "=" + Value;
+            return string.Format("{0}/{1}={2:0.000}", SourceCurrency.Code, TargetCurrency.Code, Value);
         }
     }
 }
